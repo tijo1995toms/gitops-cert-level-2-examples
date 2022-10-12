@@ -11,7 +11,7 @@ steps:
   clone:
     title: "Cloning repository"
     type: "git-clone"
-    repo: "codefresh-contrib/gitops-certification-examples"
+    repo: "tijo1995toms/gitops-certification-examples"
     revision: "main"
     stage: "clone"
 
@@ -22,11 +22,8 @@ steps:
     working_directory: "${{clone}}/source-code"
     tag: main
     tags:
-    - "latest"
-    - "v1.0"
+      - "latest"
+      - "v1.0"
     dockerfile: "Dockerfile"
     stage: "build"
     registry: dockerhub
-
-  
-
